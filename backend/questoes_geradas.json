@@ -1,0 +1,2522 @@
+[
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 5 + 10 + (-9)",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 1
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-4) + 10 + 1",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 2
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-3) - (-1) - (-2)",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 3
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-4) + 1 - (-3)",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 4
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 7 - (-10) - 3",
+    "gabarito": 14.0,
+    "dificuldade": 1,
+    "id": 5
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-1) - 6 - 10",
+    "gabarito": -17.0,
+    "dificuldade": 1,
+    "id": 6
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 7 + (-7) - 6",
+    "gabarito": -6.0,
+    "dificuldade": 1,
+    "id": 7
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-3) + (-9) + (-9)",
+    "gabarito": -21.0,
+    "dificuldade": 1,
+    "id": 8
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-3) + 10 - (-5)",
+    "gabarito": 12.0,
+    "dificuldade": 1,
+    "id": 9
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 10 - 0 + 6",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 10
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 3 + (-6) - (-6)",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 11
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-6) - (-7) - (-4)",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 12
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-7) + (-4) - (-5)",
+    "gabarito": -6.0,
+    "dificuldade": 1,
+    "id": 13
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 6 + (-7) - (-10)",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 14
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-10) - 0 + 7",
+    "gabarito": -3.0,
+    "dificuldade": 1,
+    "id": 15
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-7) - (-1) - (-5)",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 16
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 8 + (-5) + (-4)",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 17
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-7) + 2 - 3",
+    "gabarito": -8.0,
+    "dificuldade": 1,
+    "id": 18
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-7) + 5 - 7",
+    "gabarito": -9.0,
+    "dificuldade": 1,
+    "id": 19
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 3 - 3 - 7",
+    "gabarito": -7.0,
+    "dificuldade": 1,
+    "id": 20
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-3) - 7 + (-1)",
+    "gabarito": -11.0,
+    "dificuldade": 1,
+    "id": 21
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 6 - 9 - (-4)",
+    "gabarito": 1.0,
+    "dificuldade": 1,
+    "id": 22
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 7 - 0 + 2",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 23
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 3 - (-1) - (-10)",
+    "gabarito": 14.0,
+    "dificuldade": 1,
+    "id": 24
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 2 + (-7) + 2",
+    "gabarito": -3.0,
+    "dificuldade": 1,
+    "id": 25
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-7) + (-2) - (-3)",
+    "gabarito": -6.0,
+    "dificuldade": 1,
+    "id": 26
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-7) - 7 + (-3)",
+    "gabarito": -17.0,
+    "dificuldade": 1,
+    "id": 27
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-8) + (-5) + (-6)",
+    "gabarito": -19.0,
+    "dificuldade": 1,
+    "id": 28
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: 2 + 1 - 1",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 29
+  },
+  {
+    "conceito_id": 1,
+    "enunciado": "Calcule: (-6) + 3 + 5",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 30
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/4 - 1/5. Responda como decimal.",
+    "gabarito": 0.3,
+    "dificuldade": 1,
+    "id": 31
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 3/5 - 1/10. Responda como decimal.",
+    "gabarito": 0.5,
+    "dificuldade": 1,
+    "id": 32
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/5 + 2/2. Responda como decimal.",
+    "gabarito": 1.2,
+    "dificuldade": 1,
+    "id": 33
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 3/5 - 1/5. Responda como decimal.",
+    "gabarito": 0.4,
+    "dificuldade": 1,
+    "id": 34
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/4 - 2/2. Responda como decimal.",
+    "gabarito": -0.75,
+    "dificuldade": 1,
+    "id": 35
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/2 + 4/10. Responda como decimal.",
+    "gabarito": 0.9,
+    "dificuldade": 1,
+    "id": 36
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/10 - 5/10. Responda como decimal.",
+    "gabarito": -0.3,
+    "dificuldade": 1,
+    "id": 37
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 5/10 - 5/5. Responda como decimal.",
+    "gabarito": -0.5,
+    "dificuldade": 1,
+    "id": 38
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 4/10 - 5/10. Responda como decimal.",
+    "gabarito": -0.1,
+    "dificuldade": 1,
+    "id": 39
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 4/5 + 2/2. Responda como decimal.",
+    "gabarito": 1.8,
+    "dificuldade": 1,
+    "id": 40
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 3/10 + 2/10. Responda como decimal.",
+    "gabarito": 0.5,
+    "dificuldade": 1,
+    "id": 41
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 5/5 - 5/2. Responda como decimal.",
+    "gabarito": -1.5,
+    "dificuldade": 1,
+    "id": 42
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/10 + 1/2. Responda como decimal.",
+    "gabarito": 0.6,
+    "dificuldade": 1,
+    "id": 43
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 4/10 + 5/2. Responda como decimal.",
+    "gabarito": 2.9,
+    "dificuldade": 1,
+    "id": 44
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 3/2 + 1/2. Responda como decimal.",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 45
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/5 - 3/5. Responda como decimal.",
+    "gabarito": -0.2,
+    "dificuldade": 1,
+    "id": 46
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 4/2 - 2/4. Responda como decimal.",
+    "gabarito": 1.5,
+    "dificuldade": 1,
+    "id": 47
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 3/10 - 2/4. Responda como decimal.",
+    "gabarito": -0.2,
+    "dificuldade": 1,
+    "id": 48
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 3/2 - 1/4. Responda como decimal.",
+    "gabarito": 1.25,
+    "dificuldade": 1,
+    "id": 49
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 5/4 + 2/4. Responda como decimal.",
+    "gabarito": 1.75,
+    "dificuldade": 1,
+    "id": 50
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/5 - 4/10. Responda como decimal.",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 51
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/5 + 2/5. Responda como decimal.",
+    "gabarito": 0.8,
+    "dificuldade": 1,
+    "id": 52
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/2 - 5/10. Responda como decimal.",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 53
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/5 - 3/10. Responda como decimal.",
+    "gabarito": 0.1,
+    "dificuldade": 1,
+    "id": 54
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/10 - 3/4. Responda como decimal.",
+    "gabarito": -0.65,
+    "dificuldade": 1,
+    "id": 55
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 2/5 + 2/5. Responda como decimal.",
+    "gabarito": 0.8,
+    "dificuldade": 1,
+    "id": 56
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 5/4 - 5/2. Responda como decimal.",
+    "gabarito": -1.25,
+    "dificuldade": 1,
+    "id": 57
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/2 - 2/2. Responda como decimal.",
+    "gabarito": -0.5,
+    "dificuldade": 1,
+    "id": 58
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/5 + 2/10. Responda como decimal.",
+    "gabarito": 0.4,
+    "dificuldade": 1,
+    "id": 59
+  },
+  {
+    "conceito_id": 2,
+    "enunciado": "Calcule: 1/4 + 2/10. Responda como decimal.",
+    "gabarito": 0.45,
+    "dificuldade": 1,
+    "id": 60
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 4 elevado a 3?",
+    "gabarito": 64.0,
+    "dificuldade": 1,
+    "id": 61
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 2 elevado a 2?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 62
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 16.",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 63
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 5 elevado a 3?",
+    "gabarito": 125.0,
+    "dificuldade": 1,
+    "id": 64
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 4.",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 65
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 49.",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 66
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 49.",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 67
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 36.",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 68
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 121.",
+    "gabarito": 11.0,
+    "dificuldade": 1,
+    "id": 69
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 5 elevado a 4?",
+    "gabarito": 625.0,
+    "dificuldade": 1,
+    "id": 70
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 16.",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 71
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 5 elevado a 2?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 72
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 121.",
+    "gabarito": 11.0,
+    "dificuldade": 1,
+    "id": 73
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 3 elevado a 2?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 74
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 5 elevado a 3?",
+    "gabarito": 125.0,
+    "dificuldade": 1,
+    "id": 75
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 4 elevado a 3?",
+    "gabarito": 64.0,
+    "dificuldade": 1,
+    "id": 76
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 36.",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 77
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 4 elevado a 2?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 78
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 5 elevado a 4?",
+    "gabarito": 625.0,
+    "dificuldade": 1,
+    "id": 79
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 2 elevado a 3?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 80
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 81.",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 81
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 4.",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 82
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 121.",
+    "gabarito": 11.0,
+    "dificuldade": 1,
+    "id": 83
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 100.",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 84
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 5 elevado a 3?",
+    "gabarito": 125.0,
+    "dificuldade": 1,
+    "id": 85
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 4 elevado a 4?",
+    "gabarito": 256.0,
+    "dificuldade": 1,
+    "id": 86
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 144.",
+    "gabarito": 12.0,
+    "dificuldade": 1,
+    "id": 87
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 4.",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 88
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Calcule a raiz quadrada de 64.",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 89
+  },
+  {
+    "conceito_id": 3,
+    "enunciado": "Quanto é 4 elevado a 4?",
+    "gabarito": 256.0,
+    "dificuldade": 1,
+    "id": 90
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 8, quanto vale 2x + 1?",
+    "gabarito": 17.0,
+    "dificuldade": 1,
+    "id": 91
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 4, quanto vale 5x - 3?",
+    "gabarito": 17.0,
+    "dificuldade": 1,
+    "id": 92
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 7, quanto vale 5x + 10?",
+    "gabarito": 45.0,
+    "dificuldade": 1,
+    "id": 93
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 4, quanto vale 3x - 9?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 94
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 8, quanto vale 2x - 7?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 95
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 3x + 1?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 96
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 8, quanto vale 5x + 2?",
+    "gabarito": 42.0,
+    "dificuldade": 1,
+    "id": 97
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 5x - 9?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 98
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 3x + 0?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 99
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 4, quanto vale 5x - 7?",
+    "gabarito": 13.0,
+    "dificuldade": 1,
+    "id": 100
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 6, quanto vale 5x + 0?",
+    "gabarito": 30.0,
+    "dificuldade": 1,
+    "id": 101
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 2, quanto vale 3x + 10?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 102
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 6, quanto vale 3x + 9?",
+    "gabarito": 27.0,
+    "dificuldade": 1,
+    "id": 103
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 7, quanto vale 3x + 4?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 104
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 6, quanto vale 2x - 7?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 105
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 2, quanto vale 2x - 9?",
+    "gabarito": -5.0,
+    "dificuldade": 1,
+    "id": 106
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 5, quanto vale 2x + 1?",
+    "gabarito": 11.0,
+    "dificuldade": 1,
+    "id": 107
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 7, quanto vale 4x - 10?",
+    "gabarito": 18.0,
+    "dificuldade": 1,
+    "id": 108
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 5, quanto vale 2x - 1?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 109
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 5, quanto vale 2x + 5?",
+    "gabarito": 15.0,
+    "dificuldade": 1,
+    "id": 110
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 5x - 3?",
+    "gabarito": 12.0,
+    "dificuldade": 1,
+    "id": 111
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 2x + 3?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 112
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 4, quanto vale 3x - 9?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 113
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 6x + 5?",
+    "gabarito": 23.0,
+    "dificuldade": 1,
+    "id": 114
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 7, quanto vale 3x + 5?",
+    "gabarito": 26.0,
+    "dificuldade": 1,
+    "id": 115
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 7, quanto vale 5x + 7?",
+    "gabarito": 42.0,
+    "dificuldade": 1,
+    "id": 116
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 3x + 4?",
+    "gabarito": 13.0,
+    "dificuldade": 1,
+    "id": 117
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 2, quanto vale 6x - 9?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 118
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 4, quanto vale 5x + 5?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 119
+  },
+  {
+    "conceito_id": 4,
+    "enunciado": "Se x = 3, quanto vale 5x - 8?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 120
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^4 * 4x^2. Qual o expoente de x no resultado?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 121
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^2 * 2x^4. Qual o expoente de x no resultado?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 122
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^4 * 3x^3. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 123
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^5 * 4x^4. Qual o expoente de x no resultado?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 124
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 3x^3 * 3x^4. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 125
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^4 * 4x^3. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 126
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^2 * 2x^5. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 127
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^5 * 3x^4. Qual o expoente de x no resultado?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 128
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^3 * 4x^2. Qual o expoente de x no resultado?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 129
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^5 * 5x^3. Qual o expoente de x no resultado?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 130
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 3x^5 * 2x^5. Qual o expoente de x no resultado?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 131
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^2 * 4x^5. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 132
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^5 * 5x^3. Qual o expoente de x no resultado?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 133
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^5 * 5x^2. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 134
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^4 * 3x^5. Qual o expoente de x no resultado?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 135
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^3 * 5x^2. Qual o expoente de x no resultado?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 136
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^5 * 2x^2. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 137
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^3 * 3x^4. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 138
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^2 * 3x^2. Qual o expoente de x no resultado?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 139
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^2 * 2x^2. Qual o expoente de x no resultado?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 140
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^3 * 4x^4. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 141
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^5 * 5x^3. Qual o expoente de x no resultado?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 142
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^5 * 3x^5. Qual o expoente de x no resultado?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 143
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^4 * 2x^2. Qual o expoente de x no resultado?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 144
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 5x^2 * 4x^4. Qual o expoente de x no resultado?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 145
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^3 * 2x^4. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 146
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^2 * 5x^5. Qual o expoente de x no resultado?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 147
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 2x^5 * 4x^5. Qual o expoente de x no resultado?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 148
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 4x^5 * 4x^5. Qual o expoente de x no resultado?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 149
+  },
+  {
+    "conceito_id": 5,
+    "enunciado": "Multiplique: 3x^3 * 2x^3. Qual o expoente de x no resultado?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 150
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² - 4x) - (5x² - 4x). Qual o coeficiente de x²?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 151
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² + 5x) - (1x² - 2x). Qual o coeficiente de x²?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 152
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² - 3x) + (4x² + 1x). Qual o coeficiente de x²?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 153
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² - 1x) - (3x² - 3x). Qual o coeficiente de x²?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 154
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² + 4x) + (4x² + 0x). Qual o coeficiente de x²?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 155
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² - 2x) + (2x² + 3x). Qual o coeficiente de x²?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 156
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (2x² + 4x) + (1x² - 2x). Qual o coeficiente de x²?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 157
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² - 4x) - (4x² - 5x). Qual o coeficiente de x²?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 158
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² + 1x) + (5x² + 1x). Qual o coeficiente de x²?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 159
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² - 5x) - (1x² - 1x). Qual o coeficiente de x²?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 160
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² - 1x) - (5x² - 2x). Qual o coeficiente de x²?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 161
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (2x² - 1x) - (1x² - 5x). Qual o coeficiente de x²?",
+    "gabarito": 1.0,
+    "dificuldade": 1,
+    "id": 162
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² - 1x) + (3x² + 2x). Qual o coeficiente de x²?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 163
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (2x² - 4x) + (2x² + 4x). Qual o coeficiente de x²?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 164
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² + 4x) - (4x² + 2x). Qual o coeficiente de x²?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 165
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² - 5x) + (5x² - 1x). Qual o coeficiente de x²?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 166
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (2x² - 1x) - (1x² - 4x). Qual o coeficiente de x²?",
+    "gabarito": 1.0,
+    "dificuldade": 1,
+    "id": 167
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² - 1x) - (4x² - 3x). Qual o coeficiente de x²?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 168
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² + 1x) - (2x² + 4x). Qual o coeficiente de x²?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 169
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² - 1x) - (2x² - 1x). Qual o coeficiente de x²?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 170
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² - 5x) - (1x² + 3x). Qual o coeficiente de x²?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 171
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (2x² + 2x) - (5x² + 4x). Qual o coeficiente de x²?",
+    "gabarito": -3.0,
+    "dificuldade": 1,
+    "id": 172
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (1x² + 5x) + (2x² + 1x). Qual o coeficiente de x²?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 173
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² + 4x) - (2x² + 3x). Qual o coeficiente de x²?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 174
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² + 0x) + (4x² - 5x). Qual o coeficiente de x²?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 175
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (3x² + 0x) + (1x² + 4x). Qual o coeficiente de x²?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 176
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (1x² + 0x) - (1x² + 2x). Qual o coeficiente de x²?",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 177
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (4x² - 4x) - (1x² - 4x). Qual o coeficiente de x²?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 178
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (2x² + 5x) - (2x² + 4x). Qual o coeficiente de x²?",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 179
+  },
+  {
+    "conceito_id": 6,
+    "enunciado": "Calcule (5x² + 4x) + (5x² - 2x). Qual o coeficiente de x²?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 180
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 4)(x + 4). Qual o termo independente?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 181
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 1)(x + 2). Qual o termo independente?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 182
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 1)(x + 2). Qual o termo independente?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 183
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 5)(x + 1). Qual o termo independente?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 184
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 3)(x + 5). Qual o termo independente?",
+    "gabarito": 15.0,
+    "dificuldade": 1,
+    "id": 185
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 4)(x + 2). Qual o termo independente?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 186
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 6)(x + 5). Qual o termo independente?",
+    "gabarito": 30.0,
+    "dificuldade": 1,
+    "id": 187
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 6)(x + 5). Qual o termo independente?",
+    "gabarito": 30.0,
+    "dificuldade": 1,
+    "id": 188
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 6). Qual o termo independente?",
+    "gabarito": 12.0,
+    "dificuldade": 1,
+    "id": 189
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 5)(x + 6). Qual o termo independente?",
+    "gabarito": 30.0,
+    "dificuldade": 1,
+    "id": 190
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 5)(x + 3). Qual o termo independente?",
+    "gabarito": 15.0,
+    "dificuldade": 1,
+    "id": 191
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 1)(x + 3). Qual o termo independente?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 192
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 2). Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 193
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 3)(x + 5). Qual o termo independente?",
+    "gabarito": 15.0,
+    "dificuldade": 1,
+    "id": 194
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 1)(x + 4). Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 195
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 1)(x + 4). Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 196
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 6)(x + 3). Qual o termo independente?",
+    "gabarito": 18.0,
+    "dificuldade": 1,
+    "id": 197
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 2). Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 198
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 4)(x + 4). Qual o termo independente?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 199
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 5). Qual o termo independente?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 200
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 1). Qual o termo independente?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 201
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 3)(x + 5). Qual o termo independente?",
+    "gabarito": 15.0,
+    "dificuldade": 1,
+    "id": 202
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 3). Qual o termo independente?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 203
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 4)(x + 2). Qual o termo independente?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 204
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 3)(x + 3). Qual o termo independente?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 205
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 5)(x + 2). Qual o termo independente?",
+    "gabarito": 10.0,
+    "dificuldade": 1,
+    "id": 206
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 2)(x + 1). Qual o termo independente?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 207
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 3)(x + 5). Qual o termo independente?",
+    "gabarito": 15.0,
+    "dificuldade": 1,
+    "id": 208
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 6)(x + 2). Qual o termo independente?",
+    "gabarito": 12.0,
+    "dificuldade": 1,
+    "id": 209
+  },
+  {
+    "conceito_id": 7,
+    "enunciado": "Multiplique: (x + 4)(x + 3). Qual o termo independente?",
+    "gabarito": 12.0,
+    "dificuldade": 1,
+    "id": 210
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 6)². Qual o termo independente?",
+    "gabarito": 36.0,
+    "dificuldade": 1,
+    "id": 211
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 212
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 213
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 3)². Qual o termo independente?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 214
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 6)². Qual o termo independente?",
+    "gabarito": 36.0,
+    "dificuldade": 1,
+    "id": 215
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 216
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 217
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 6)². Qual o termo independente?",
+    "gabarito": 36.0,
+    "dificuldade": 1,
+    "id": 218
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 219
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 220
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 221
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 3)². Qual o termo independente?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 222
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 6)². Qual o termo independente?",
+    "gabarito": 36.0,
+    "dificuldade": 1,
+    "id": 223
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 224
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 225
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 3)². Qual o termo independente?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 226
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 227
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 228
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 2)². Qual o termo independente?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 229
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 230
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 4)². Qual o termo independente?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 231
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 7)². Qual o termo independente?",
+    "gabarito": 49.0,
+    "dificuldade": 1,
+    "id": 232
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 7)². Qual o termo independente?",
+    "gabarito": 49.0,
+    "dificuldade": 1,
+    "id": 233
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 4)². Qual o termo independente?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 234
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 3)². Qual o termo independente?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 235
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 4)². Qual o termo independente?",
+    "gabarito": 16.0,
+    "dificuldade": 1,
+    "id": 236
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 7)². Qual o termo independente?",
+    "gabarito": 49.0,
+    "dificuldade": 1,
+    "id": 237
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 3)². Qual o termo independente?",
+    "gabarito": 9.0,
+    "dificuldade": 1,
+    "id": 238
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 7)². Qual o termo independente?",
+    "gabarito": 49.0,
+    "dificuldade": 1,
+    "id": 239
+  },
+  {
+    "conceito_id": 8,
+    "enunciado": "Expanda (x + 5)². Qual o termo independente?",
+    "gabarito": 25.0,
+    "dificuldade": 1,
+    "id": 240
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 241
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 25. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 242
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 25. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 243
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 244
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 245
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 64. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 246
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 64. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 247
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 49. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 248
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 25. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 249
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 49. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 250
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 49. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 251
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 25. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 252
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 64. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 253
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 9. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 254
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 16. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 255
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 64. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 256
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 257
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 258
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 4. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 259
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 4. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 260
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 16. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 261
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 49. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 262
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 16. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 263
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 16. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 264
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 9. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 265
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 25. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 266
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 64. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 267
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 268
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 25. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 269
+  },
+  {
+    "conceito_id": 9,
+    "enunciado": "Fatore x² - 36. Qual o valor numérico positivo que aparece nos fatores?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 270
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 3 = 0. Qual o valor de x?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 271
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 9 = 0. Qual o valor de x?",
+    "gabarito": -3.0,
+    "dificuldade": 1,
+    "id": 272
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 4x + 16 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 273
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 4x + 16 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 274
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 6x + 0 = 0. Qual o valor de x?",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 275
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x - 9 = 0. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 276
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 6x + 24 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 277
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x - 9 = 0. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 278
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 15 = 0. Qual o valor de x?",
+    "gabarito": -5.0,
+    "dificuldade": 1,
+    "id": 279
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 2x + 8 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 280
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 2x + 10 = 0. Qual o valor de x?",
+    "gabarito": -5.0,
+    "dificuldade": 1,
+    "id": 281
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 5x + 10 = 0. Qual o valor de x?",
+    "gabarito": -2.0,
+    "dificuldade": 1,
+    "id": 282
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 6x + 6 = 0. Qual o valor de x?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 283
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x - 6 = 0. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 284
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 5x - 15 = 0. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 285
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 9 = 0. Qual o valor de x?",
+    "gabarito": -3.0,
+    "dificuldade": 1,
+    "id": 286
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 12 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 287
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 5x - 10 = 0. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 288
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 5x - 5 = 0. Qual o valor de x?",
+    "gabarito": 1.0,
+    "dificuldade": 1,
+    "id": 289
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x - 6 = 0. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 290
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 6x + 0 = 0. Qual o valor de x?",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 291
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 6 = 0. Qual o valor de x?",
+    "gabarito": -2.0,
+    "dificuldade": 1,
+    "id": 292
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 5x + 20 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 293
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 2x - 10 = 0. Qual o valor de x?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 294
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 2x + 0 = 0. Qual o valor de x?",
+    "gabarito": 0.0,
+    "dificuldade": 1,
+    "id": 295
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x - 6 = 0. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 296
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 6x + 24 = 0. Qual o valor de x?",
+    "gabarito": -4.0,
+    "dificuldade": 1,
+    "id": 297
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 3x + 3 = 0. Qual o valor de x?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 298
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 6x + 6 = 0. Qual o valor de x?",
+    "gabarito": -1.0,
+    "dificuldade": 1,
+    "id": 299
+  },
+  {
+    "conceito_id": 10,
+    "enunciado": "Resolva: 4x - 16 = 0. Qual o valor de x?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 300
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 7 e x - y = -1. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 301
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 10 e x - y = 4. Qual o valor de x?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 302
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 10 e x - y = 2. Qual o valor de x?",
+    "gabarito": 6.0,
+    "dificuldade": 1,
+    "id": 303
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 11 e x - y = -3. Qual o valor de x?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 304
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 6 e x - y = 4. Qual o valor de x?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 305
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 6 e x - y = -2. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 306
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = 2. Qual o valor de x?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 307
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = 6. Qual o valor de x?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 308
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = -4. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 309
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 9 e x - y = -5. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 310
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 6 e x - y = -2. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 311
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = -2. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 312
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 7 e x - y = 1. Qual o valor de x?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 313
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 9 e x - y = 5. Qual o valor de x?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 314
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 9 e x - y = 1. Qual o valor de x?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 315
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 10 e x - y = -4. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 316
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = 0. Qual o valor de x?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 317
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 7 e x - y = 1. Qual o valor de x?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 318
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 6 e x - y = -2. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 319
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 5 e x - y = -1. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 320
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 12 e x - y = -2. Qual o valor de x?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 321
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 5 e x - y = 3. Qual o valor de x?",
+    "gabarito": 4.0,
+    "dificuldade": 1,
+    "id": 322
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 6 e x - y = 4. Qual o valor de x?",
+    "gabarito": 5.0,
+    "dificuldade": 1,
+    "id": 323
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 12 e x - y = 4. Qual o valor de x?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 324
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = -2. Qual o valor de x?",
+    "gabarito": 3.0,
+    "dificuldade": 1,
+    "id": 325
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = -4. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 326
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 9 e x - y = -5. Qual o valor de x?",
+    "gabarito": 2.0,
+    "dificuldade": 1,
+    "id": 327
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 8 e x - y = 6. Qual o valor de x?",
+    "gabarito": 7.0,
+    "dificuldade": 1,
+    "id": 328
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 13 e x - y = 3. Qual o valor de x?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 329
+  },
+  {
+    "conceito_id": 11,
+    "enunciado": "Sistema: x + y = 9 e x - y = 7. Qual o valor de x?",
+    "gabarito": 8.0,
+    "dificuldade": 1,
+    "id": 330
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 4x - 5 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 331
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x²  - 1 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 332
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x²  - 25 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 333
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 4x - 5 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 334
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 1x - 2 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 335
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 2x - 3 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 336
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 3x - 4 = 0. Qual a raiz positiva?",
+    "gabarito": 4.0,
+    "dificuldade": 2,
+    "id": 337
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x²  - 4 = 0. Qual a raiz positiva?",
+    "gabarito": 2.0,
+    "dificuldade": 2,
+    "id": 338
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x²  - 25 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 339
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 2x - 15 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 340
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 3x - 4 = 0. Qual a raiz positiva?",
+    "gabarito": 4.0,
+    "dificuldade": 2,
+    "id": 341
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 1x - 2 = 0. Qual a raiz positiva?",
+    "gabarito": 2.0,
+    "dificuldade": 2,
+    "id": 342
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 1x - 2 = 0. Qual a raiz positiva?",
+    "gabarito": 2.0,
+    "dificuldade": 2,
+    "id": 343
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 4x - 5 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 344
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 2x - 15 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 345
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x²  - 9 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 346
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 2x - 15 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 347
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 3x - 10 = 0. Qual a raiz positiva?",
+    "gabarito": 2.0,
+    "dificuldade": 2,
+    "id": 348
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 2x - 3 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 349
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 4x - 5 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 350
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 1x - 2 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 351
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 1x - 6 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 352
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 3x - 10 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 353
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 2x - 15 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 354
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 2x - 3 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 355
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 2x - 8 = 0. Qual a raiz positiva?",
+    "gabarito": 4.0,
+    "dificuldade": 2,
+    "id": 356
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² - 2x - 15 = 0. Qual a raiz positiva?",
+    "gabarito": 5.0,
+    "dificuldade": 2,
+    "id": 357
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 2x - 15 = 0. Qual a raiz positiva?",
+    "gabarito": 3.0,
+    "dificuldade": 2,
+    "id": 358
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 3x - 4 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 359
+  },
+  {
+    "conceito_id": 12,
+    "enunciado": "Resolva: x² + 3x - 4 = 0. Qual a raiz positiva?",
+    "gabarito": 1.0,
+    "dificuldade": 2,
+    "id": 360
+  }
+]
