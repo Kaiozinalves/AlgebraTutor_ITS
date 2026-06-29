@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { obterProximaQuestao, responderQuestao, enviarDuvida } from '../api';
-import { CheckCircle2, XCircle, ChevronRight, BrainCircuit, MessageCircle, Send } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronRight, BrainCircuit, MessageCircle, Send, LogOut } from 'lucide-react';
 
 function Exercicio() {
   const [nome, setNome] = useState('');
@@ -30,6 +30,11 @@ function Exercicio() {
     setNome(aluno);
     carregarQuestao(aluno);
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('aluno_nome');
+    navigate('/');
+  };
 
   const carregarQuestao = async (aluno) => {
     setLoading(true);
@@ -118,7 +123,13 @@ function Exercicio() {
   }
 
   return (
-    <div className="flex-1 max-w-2xl mx-auto w-full flex flex-col pt-8">
+    <div className="flex-1 max-w-2xl mx-auto w-full flex flex-col pt-4 sm:pt-8">
+      <div className="flex justify-end mb-4">
+        <button onClick={handleLogout} className="text-slate-500 hover:text-slate-300 transition flex items-center gap-1 text-sm bg-dark-800 px-3 py-1.5 rounded-lg">
+          <LogOut size={14} /> Trocar de Aluno
+        </button>
+      </div>
+
       {questao && !feedback && (
         <div className="glass-panel p-6 sm:p-8 rounded-2xl animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="inline-block px-3 py-1 bg-dark-700 text-brand-300 text-xs font-semibold rounded-full mb-4">

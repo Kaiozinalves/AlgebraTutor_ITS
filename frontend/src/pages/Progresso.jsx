@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { obterProgresso } from '../api';
-import { Trophy, Lock, PlayCircle, CheckCircle2 } from 'lucide-react';
+import { Trophy, Lock, PlayCircle, CheckCircle2, LogOut } from 'lucide-react';
 
 function Progresso() {
   const [nome, setNome] = useState('');
@@ -18,6 +18,11 @@ function Progresso() {
     setNome(aluno);
     carregarProgresso(aluno);
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('aluno_nome');
+    navigate('/');
+  };
 
   const carregarProgresso = async (aluno) => {
     setLoading(true);
@@ -42,9 +47,14 @@ function Progresso() {
           <h2 className="text-3xl font-bold mb-1">Seu Progresso</h2>
           <p className="text-slate-400">Acompanhe seu desenvolvimento, {nome}.</p>
         </div>
-        <button onClick={() => navigate('/exercicio')} className="px-5 py-2 bg-brand-500 hover:bg-brand-600 font-medium rounded-xl flex items-center gap-2 transition">
-          <PlayCircle size={20} /> Continuar Estudando
-        </button>
+        <div className="flex items-center gap-3">
+          <button onClick={handleLogout} className="px-4 py-2 border border-dark-600 text-slate-400 hover:bg-dark-700 hover:text-white rounded-xl flex items-center gap-2 transition">
+            <LogOut size={18} /> Sair
+          </button>
+          <button onClick={() => navigate('/exercicio')} className="px-5 py-2 bg-brand-500 hover:bg-brand-600 font-medium rounded-xl flex items-center gap-2 transition">
+            <PlayCircle size={20} /> Continuar
+          </button>
+        </div>
       </div>
 
       <div className="space-y-12">
