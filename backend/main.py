@@ -130,11 +130,12 @@ def responder_questao(req: ResponderRequest, db: Session = Depends(get_db)):
     db.commit()
     
     # Pegar feedback da IA
-    feedback_ia = get_ia_feedback(acertou, questao.enunciado, questao.gabarito)
+    feedback_ia, resolucao_ia = get_ia_feedback(acertou, questao.enunciado, questao.gabarito)
     
     return {
         "correto": acertou,
         "feedback_ia": feedback_ia,
+        "resolucao_ia": resolucao_ia,
         "dominio_atualizado": novo_dominio,
         "gabarito": questao.gabarito,
         "questoes_hoje": aluno.questoes_hoje

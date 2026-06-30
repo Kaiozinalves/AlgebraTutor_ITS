@@ -14,7 +14,7 @@ O aluno {'acertou' if acertou else 'errou'} a questão: "{enunciado}".
     if acertou:
         prompt += 'Parabéns! Reforce o conceito central em 1 frase curta.'
     else:
-        prompt += f'A resposta correta é {gabarito}. IMPORTANTE: NÃO revele a resposta correta ao aluno. Explique o conceito em 2 frases simples e dê uma dica de como ele deve pensar para resolver a questão sozinho da próxima vez.'
+        prompt += f'A resposta correta é {gabarito}. IMPORTANTE: NÃO revele a resposta correta no feedback. Explique o conceito em 2 frases simples e dê uma dica de como ele deve pensar para resolver a questão sozinho da próxima vez. APÓS a sua dica, pule uma linha, escreva exatamente a string "|||" e, nas linhas seguintes, forneça a resolução completa passo a passo mostrando matematicamente como chegar ao valor exato {gabarito}.'
         
     prompt += '\nSeja encorajador, direto e use linguagem simples.'
     
@@ -30,13 +30,20 @@ O aluno {'acertou' if acertou else 'errou'} a questão: "{enunciado}".
             model='gemini-2.5-flash',
             contents=prompt
         )
-        return response.text
+        texto = response.text
+        if acertou:
+            return texto, None
+        else:
+            partes = texto.split("|||")
+            feedback = partes[0].strip()
+            resolucao = partes[1].strip() if len(partes) > 1 else "Resolução detalhada indisponível no momento."
+            return feedback, resolucao
     except Exception as e:
         print(f"Erro na API do Gemini: {e}")
         if acertou:
-            return "Parabéns! Você acertou a questão."
+            return "Parabéns! Você acertou a questão.", None
         else:
-            return "Resposta incorreta. Tente revisar os passos e preste atenção aos sinais e operações! Se precisar, veja o gabarito."
+            return "Resposta incorreta. Tente revisar os passos e preste atenção aos sinais e operações! Se precisar, veja o gabarito.", "Resolução não pôde ser gerada devido a erro técnico na IA."
 
 def responder_duvida_aluno(enunciado: str, duvida: str) -> str:
     prompt = f"""Você é um tutor de álgebra para estudantes brasileiros do ensino médio.

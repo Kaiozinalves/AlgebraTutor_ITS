@@ -263,8 +263,20 @@ function Exercicio() {
           )}
 
           {!feedback.correto && mostrarResposta && (
-            <div className="mb-6 p-4 bg-brand-500/10 border border-brand-500/30 rounded-xl">
-              <p className="text-brand-300 font-semibold">Gabarito: {feedback.gabarito}</p>
+            <div className="mb-6 space-y-4">
+              <div className="p-4 bg-brand-500/10 border border-brand-500/30 rounded-xl">
+                <p className="text-brand-300 font-semibold">Gabarito: {feedback.gabarito}</p>
+              </div>
+              {feedback.resolucao_ia && (
+                <div className="p-5 bg-dark-800 border border-dark-600 rounded-xl animate-in fade-in slide-in-from-top-2 duration-500">
+                  <h4 className="text-brand-300 font-semibold mb-3 flex items-center gap-2">
+                    <BrainCircuit size={18} /> Resolução da IA:
+                  </h4>
+                  <p className="text-slate-300 whitespace-pre-wrap text-sm leading-relaxed font-mono">
+                    {feedback.resolucao_ia}
+                  </p>
+                </div>
+              )}
             </div>
           )}
           
