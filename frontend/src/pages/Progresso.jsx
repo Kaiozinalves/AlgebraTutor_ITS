@@ -6,6 +6,7 @@ import { Trophy, Lock, PlayCircle, CheckCircle2, LogOut } from 'lucide-react';
 function Progresso() {
   const [nome, setNome] = useState('');
   const [progresso, setProgresso] = useState([]);
+  const [ofensiva, setOfensiva] = useState(0);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -28,7 +29,8 @@ function Progresso() {
     setLoading(true);
     try {
       const data = await obterProgresso(aluno);
-      setProgresso(data);
+      setProgresso(data.modulos);
+      setOfensiva(data.ofensiva);
     } catch (err) {
       console.error(err);
     } finally {
@@ -43,9 +45,16 @@ function Progresso() {
   return (
     <div className="flex-1 flex flex-col pb-10">
       <div className="flex items-center justify-between mb-8 mt-4">
-        <div>
-          <h2 className="text-3xl font-bold mb-1">Seu Progresso</h2>
-          <p className="text-slate-400">Acompanhe seu desenvolvimento, {nome}.</p>
+        <div className="flex items-center gap-4">
+          <div>
+            <h2 className="text-3xl font-bold mb-1">Seu Progresso</h2>
+            <p className="text-slate-400">Acompanhe seu desenvolvimento, {nome}.</p>
+          </div>
+          {ofensiva > 0 && (
+            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center gap-2">
+              <span className="text-orange-500 font-bold text-lg">🔥 {ofensiva} Dia{ofensiva > 1 ? 's' : ''}</span>
+            </div>
+          )}
         </div>
         <div className="flex items-center gap-3">
           <button onClick={handleLogout} className="px-4 py-2 border border-dark-600 text-slate-400 hover:bg-dark-700 hover:text-white rounded-xl flex items-center gap-2 transition">

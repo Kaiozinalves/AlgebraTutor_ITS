@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, Date
 from sqlalchemy.orm import relationship
+import datetime
 from database import Base
 
 class Conceito(Base):
@@ -35,6 +36,8 @@ class Aluno(Base):
     __tablename__ = "alunos"
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String, unique=True, index=True)
+    ofensiva_dias = Column(Integer, default=0)
+    ultimo_acesso = Column(Date, nullable=True)
     
     progresso = relationship("AlunoProgresso", back_populates="aluno")
     respostas = relationship("RespostaLog", back_populates="aluno")

@@ -6,6 +6,7 @@ import { CheckCircle2, XCircle, ChevronRight, BrainCircuit, MessageCircle, Send,
 function Exercicio() {
   const [nome, setNome] = useState('');
   const [questao, setQuestao] = useState(null);
+  const [ofensiva, setOfensiva] = useState(0);
   const [resposta, setResposta] = useState('');
   const [loading, setLoading] = useState(true);
   const [mostrarResposta, setMostrarResposta] = useState(false);
@@ -47,6 +48,10 @@ function Exercicio() {
     
     try {
       const data = await obterProximaQuestao(aluno, conceitoId);
+      if (data.ofensiva !== undefined) {
+        setOfensiva(data.ofensiva);
+      }
+      
       if (data.mensagem) {
         setQuestao(null); // Concluído
       } else {
@@ -124,7 +129,12 @@ function Exercicio() {
 
   return (
     <div className="flex-1 max-w-2xl mx-auto w-full flex flex-col pt-4 sm:pt-8">
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-between items-center mb-4">
+        {ofensiva > 0 ? (
+          <div className="px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-lg flex items-center gap-1">
+            <span className="text-orange-500 font-bold text-sm">🔥 {ofensiva} Dia{ofensiva > 1 ? 's' : ''}</span>
+          </div>
+        ) : <div />}
         <button onClick={handleLogout} className="text-slate-500 hover:text-slate-300 transition flex items-center gap-1 text-sm bg-dark-800 px-3 py-1.5 rounded-lg">
           <LogOut size={14} /> Trocar de Aluno
         </button>

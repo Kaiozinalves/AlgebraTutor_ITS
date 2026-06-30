@@ -5,6 +5,21 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 from typing import Optional
 import math
+import datetime
+
+def atualizar_ofensiva(aluno, db: Session):
+    hoje = datetime.date.today()
+    if aluno.ultimo_acesso:
+        diff = (hoje - aluno.ultimo_acesso).days
+        if diff == 1:
+            aluno.ofensiva_dias += 1
+        elif diff > 1:
+            aluno.ofensiva_dias = 1
+    else:
+        aluno.ofensiva_dias = 1
+        
+    aluno.ultimo_acesso = hoje
+    db.commit()
 
 from database import engine, Base, get_db
 from models import Aluno, RespostaLog, Conceito, AlunoProgresso
@@ -61,11 +76,17 @@ def obter_proxima_questao(nome: str, conceito_id: Optional[int] = None, db: Sess
     aluno = db.query(Aluno).filter(Aluno.nome == nome).first()
     if not aluno:
         raise HTTPException(status_code=404, detail="Aluno não encontrado.")
+    
+    atualizar_ofensiva(aluno, db)
+
+    if not aluno:
+        raise HTTPException(status_code=404, detail="Aluno não encontrado.")
         
     proxima = selecionar_proxima_questao(db, aluno.id, conceito_id)
     if not proxima:
-        return {"mensagem": "parabéns, conteúdo concluído"}
+        return {"mensagem": "parabéns, conteúdo concluído", "ofensiva": aluno.ofensiva_dias}
         
+    proxima["ofensiva"] = aluno.ofensiva_dias
     return proxima
 
 @app.post("/responder")
@@ -112,6 +133,8 @@ def obter_progresso(nome: str, db: Session = Depends(get_db)):
     if not aluno:
         raise HTTPException(status_code=404, detail="Aluno não encontrado.")
         
+    atualizar_ofensiva(aluno, db)
+    
     conceitos = db.query(Conceito).order_by(Conceito.id).all()
     progressos = db.query(AlunoProgresso).filter(AlunoProgresso.aluno_id == aluno.id).all()
     dominio_map = {p.conceito_id: p.dominio for p in progressos}
@@ -143,4 +166,7 @@ def obter_progresso(nome: str, db: Session = Depends(get_db)):
             "nivel": c.nivel
         })
         
-    return resultado
+    return {
+        "ofensiva": aluno.ofensiva_dias,
+        "modulos": resultado
+    }
