@@ -7,18 +7,17 @@ from typing import Optional
 import math
 import datetime
 
-def atualizar_ofensiva(aluno, db: Session):
+def check_ofensiva_perdida(aluno, db: Session):
     hoje = datetime.date.today()
-    if aluno.ultimo_acesso:
-        diff = (hoje - aluno.ultimo_acesso).days
-        if diff == 1:
-            aluno.ofensiva_dias += 1
-        elif diff > 1:
-            aluno.ofensiva_dias = 1
-    else:
-        aluno.ofensiva_dias = 1
+    if aluno.ultima_ofensiva:
+        diff = (hoje - aluno.ultima_ofensiva).days
+        if diff > 1:
+            aluno.ofensiva_dias = 0
+            
+    if aluno.ultimo_acesso != hoje:
+        aluno.questoes_hoje = 0
+        aluno.ultimo_acesso = hoje
         
-    aluno.ultimo_acesso = hoje
     db.commit()
 
 from database import engine, Base, get_db
@@ -77,10 +76,7 @@ def obter_proxima_questao(nome: str, conceito_id: Optional[int] = None, db: Sess
     if not aluno:
         raise HTTPException(status_code=404, detail="Aluno não encontrado.")
     
-    atualizar_ofensiva(aluno, db)
-
-    if not aluno:
-        raise HTTPException(status_code=404, detail="Aluno não encontrado.")
+    check_ofensiva_perdida(aluno, db)
         
     proxima = selecionar_proxima_questao(db, aluno.id, conceito_id)
     if not proxima:
@@ -110,6 +106,26 @@ def responder_questao(req: ResponderRequest, db: Session = Depends(get_db)):
     # Registrar log para não repetir
     log = RespostaLog(aluno_id=aluno.id, questao_id=questao.id, acertou=acertou)
     db.add(log)
+    
+    # Processar meta de 5 questões diárias
+    hoje = datetime.date.today()
+    if aluno.ultimo_acesso != hoje:
+        aluno.questoes_hoje = 1
+        aluno.ultimo_acesso = hoje
+    else:
+        aluno.questoes_hoje += 1
+        
+    if aluno.questoes_hoje == 5:
+        if aluno.ultima_ofensiva:
+            diff = (hoje - aluno.ultima_ofensiva).days
+            if diff == 1:
+                aluno.ofensiva_dias += 1
+            elif diff > 1:
+                aluno.ofensiva_dias = 1
+        else:
+            aluno.ofensiva_dias = 1
+        aluno.ultima_ofensiva = hoje
+        
     db.commit()
     
     # Pegar feedback da IA
@@ -119,7 +135,8 @@ def responder_questao(req: ResponderRequest, db: Session = Depends(get_db)):
         "correto": acertou,
         "feedback_ia": feedback_ia,
         "dominio_atualizado": novo_dominio,
-        "gabarito": questao.gabarito
+        "gabarito": questao.gabarito,
+        "questoes_hoje": aluno.questoes_hoje
     }
 
 @app.post("/duvida")
@@ -133,7 +150,7 @@ def obter_progresso(nome: str, db: Session = Depends(get_db)):
     if not aluno:
         raise HTTPException(status_code=404, detail="Aluno não encontrado.")
         
-    atualizar_ofensiva(aluno, db)
+    check_ofensiva_perdida(aluno, db)
     
     conceitos = db.query(Conceito).order_by(Conceito.id).all()
     progressos = db.query(AlunoProgresso).filter(AlunoProgresso.aluno_id == aluno.id).all()
@@ -168,5 +185,6 @@ def obter_progresso(nome: str, db: Session = Depends(get_db)):
         
     return {
         "ofensiva": aluno.ofensiva_dias,
+        "questoes_hoje": aluno.questoes_hoje,
         "modulos": resultado
     }

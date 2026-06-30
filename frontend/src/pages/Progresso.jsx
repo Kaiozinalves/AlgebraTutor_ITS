@@ -7,6 +7,7 @@ function Progresso() {
   const [nome, setNome] = useState('');
   const [progresso, setProgresso] = useState([]);
   const [ofensiva, setOfensiva] = useState(0);
+  const [questoesHoje, setQuestoesHoje] = useState(0);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -31,6 +32,9 @@ function Progresso() {
       const data = await obterProgresso(aluno);
       setProgresso(data.modulos);
       setOfensiva(data.ofensiva);
+      if (data.questoes_hoje !== undefined) {
+        setQuestoesHoje(data.questoes_hoje);
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -50,11 +54,16 @@ function Progresso() {
             <h2 className="text-3xl font-bold mb-1">Seu Progresso</h2>
             <p className="text-slate-400">Acompanhe seu desenvolvimento, {nome}.</p>
           </div>
-          {ofensiva > 0 && (
-            <div className="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center gap-2">
-              <span className="text-orange-500 font-bold text-lg">🔥 {ofensiva} Dia{ofensiva > 1 ? 's' : ''}</span>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <div className="px-3 py-1 bg-brand-500/10 border border-brand-500/30 rounded-lg flex items-center gap-2" title="Meta diária">
+              <span className="text-brand-400 font-bold text-sm">🎯 {Math.min(questoesHoje, 5)}/5</span>
             </div>
-          )}
+            {ofensiva > 0 && (
+              <div className="px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-lg flex items-center gap-2">
+                <span className="text-orange-500 font-bold text-sm">🔥 {ofensiva} Dia{ofensiva > 1 ? 's' : ''}</span>
+              </div>
+            )}
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <button onClick={handleLogout} className="px-4 py-2 border border-dark-600 text-slate-400 hover:bg-dark-700 hover:text-white rounded-xl flex items-center gap-2 transition">

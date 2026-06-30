@@ -38,6 +38,8 @@ class Aluno(Base):
     nome = Column(String, unique=True, index=True)
     ofensiva_dias = Column(Integer, default=0)
     ultimo_acesso = Column(Date, nullable=True)
+    questoes_hoje = Column(Integer, default=0)
+    ultima_ofensiva = Column(Date, nullable=True)
     
     progresso = relationship("AlunoProgresso", back_populates="aluno")
     respostas = relationship("RespostaLog", back_populates="aluno")

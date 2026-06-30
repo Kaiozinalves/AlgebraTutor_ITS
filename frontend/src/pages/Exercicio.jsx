@@ -7,6 +7,7 @@ function Exercicio() {
   const [nome, setNome] = useState('');
   const [questao, setQuestao] = useState(null);
   const [ofensiva, setOfensiva] = useState(0);
+  const [questoesHoje, setQuestoesHoje] = useState(0);
   const [resposta, setResposta] = useState('');
   const [loading, setLoading] = useState(true);
   const [mostrarResposta, setMostrarResposta] = useState(false);
@@ -78,6 +79,13 @@ function Exercicio() {
     try {
       const res = await responderQuestao(nome, questao.questao_id, ans);
       setFeedback(res);
+      if (res.questoes_hoje !== undefined) {
+        setQuestoesHoje(res.questoes_hoje);
+        // Atualiza a ofensiva na interface caso ele tenha batido a meta agora
+        if (res.questoes_hoje === 5) {
+          setOfensiva(prev => prev + 1);
+        }
+      }
     } catch (err) {
       console.error(err);
       alert('Erro ao enviar resposta');
@@ -130,11 +138,16 @@ function Exercicio() {
   return (
     <div className="flex-1 max-w-2xl mx-auto w-full flex flex-col pt-4 sm:pt-8">
       <div className="flex justify-between items-center mb-4">
-        {ofensiva > 0 ? (
-          <div className="px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-lg flex items-center gap-1">
-            <span className="text-orange-500 font-bold text-sm">🔥 {ofensiva} Dia{ofensiva > 1 ? 's' : ''}</span>
+        <div className="flex gap-2">
+          <div className="px-3 py-1 bg-brand-500/10 border border-brand-500/30 rounded-lg flex items-center gap-1">
+            <span className="text-brand-400 font-bold text-sm">🎯 {Math.min(questoesHoje, 5)}/5</span>
           </div>
-        ) : <div />}
+          {ofensiva > 0 && (
+            <div className="px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-lg flex items-center gap-1">
+              <span className="text-orange-500 font-bold text-sm">🔥 {ofensiva} Dia{ofensiva > 1 ? 's' : ''}</span>
+            </div>
+          )}
+        </div>
         <button onClick={handleLogout} className="text-slate-500 hover:text-slate-300 transition flex items-center gap-1 text-sm bg-dark-800 px-3 py-1.5 rounded-lg">
           <LogOut size={14} /> Trocar de Aluno
         </button>
