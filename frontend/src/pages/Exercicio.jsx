@@ -18,6 +18,11 @@ function Exercicio() {
   const [respostaDuvida, setRespostaDuvida] = useState('');
   const [loadingDuvida, setLoadingDuvida] = useState(false);
   const [usouDica, setUsouDica] = useState(false);
+  
+  // Computação Afetiva (Frustração)
+  const [errosSeguidos, setErrosSeguidos] = useState(0);
+  const [tempoNaQuestao, setTempoNaQuestao] = useState(0);
+  const [frustracaoDetectada, setFrustracaoDetectada] = useState(false);
 
   const [feedback, setFeedback] = useState(null);
   const navigate = useNavigate();
@@ -34,12 +39,28 @@ function Exercicio() {
     carregarQuestao(aluno);
   }, []);
 
+  useEffect(() => {
+    if (!questao || feedback || frustracaoDetectada || loading) return;
+    const timer = setInterval(() => {
+      setTempoNaQuestao(prev => prev + 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [questao, feedback, frustracaoDetectada, loading]);
+
+  useEffect(() => {
+    if (!frustracaoDetectada && questao && !feedback) {
+      if (errosSeguidos >= 3 || tempoNaQuestao >= 60) {
+        setFrustracaoDetectada(true);
+      }
+    }
+  }, [errosSeguidos, tempoNaQuestao, frustracaoDetectada, questao, feedback]);
+
   const handleLogout = () => {
     localStorage.removeItem('aluno_nome');
     navigate('/');
   };
 
-  const carregarQuestao = async (aluno) => {
+  const carregarQuestao = async (aluno, nivelMaximo = null) => {
     setLoading(true);
     setFeedback(null);
     setResposta('');
@@ -49,8 +70,13 @@ function Exercicio() {
     setRespostaDuvida('');
     setUsouDica(false);
     
+    // Reseta o rastreador
+    setErrosSeguidos(0);
+    setTempoNaQuestao(0);
+    setFrustracaoDetectada(false);
+    
     try {
-      const data = await obterProximaQuestao(aluno, conceitoId);
+      const data = await obterProximaQuestao(aluno, conceitoId, nivelMaximo);
       if (data.ofensiva !== undefined) {
         setOfensiva(data.ofensiva);
       }
@@ -81,6 +107,13 @@ function Exercicio() {
     try {
       const res = await responderQuestao(nome, questao.questao_id, ans, usouDica);
       setFeedback(res);
+      
+      if (!res.correto) {
+        setErrosSeguidos(prev => prev + 1);
+      } else {
+        setErrosSeguidos(0);
+      }
+      
       if (res.questoes_hoje !== undefined) {
         setQuestoesHoje(res.questoes_hoje);
         // Atualiza a ofensiva na interface caso ele tenha batido a meta agora
@@ -287,6 +320,35 @@ function Exercicio() {
             Próxima Questão
             <ChevronRight size={20} />
           </button>
+        </div>
+      )}
+
+      {frustracaoDetectada && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="bg-dark-900 border border-brand-500/50 p-8 rounded-2xl max-w-md w-full shadow-2xl shadow-brand-500/20 text-center animate-in zoom-in-95 duration-500">
+            <div className="w-16 h-16 bg-brand-500/20 text-brand-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <BrainCircuit size={32} />
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-white">Tudo bem por aí?</h3>
+            <p className="text-slate-300 mb-8 leading-relaxed">
+              O Sistema Tutor detectou que você está há um bom tempo lutando com este módulo. 
+              Gostaria que eu diminuísse a dificuldade para o <strong>Nível 1</strong> ou prefere fazer uma pausa para refrescar a mente?
+            </p>
+            <div className="space-y-3">
+              <button
+                onClick={() => carregarQuestao(nome, 1)}
+                className="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-xl transition"
+              >
+                Sim, diminuir para Nível 1
+              </button>
+              <button
+                onClick={() => navigate('/progresso')}
+                className="w-full py-3 bg-dark-800 hover:bg-dark-700 text-slate-300 font-medium rounded-xl transition border border-dark-600"
+              >
+                Prefiro Fazer uma Pausa
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

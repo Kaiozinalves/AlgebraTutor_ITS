@@ -72,14 +72,14 @@ def iniciar_sessao(req: IniciarRequest, db: Session = Depends(get_db)):
         return {"nome": aluno.nome, "mensagem": f"Bem-vindo(a) de volta, {aluno.nome}!"}
 
 @app.get("/proxima/{nome}")
-def obter_proxima_questao(nome: str, conceito_id: Optional[int] = None, db: Session = Depends(get_db)):
+def obter_proxima_questao(nome: str, conceito_id: Optional[int] = None, nivel_maximo: Optional[int] = None, db: Session = Depends(get_db)):
     aluno = db.query(Aluno).filter(Aluno.nome == nome).first()
     if not aluno:
         raise HTTPException(status_code=404, detail="Aluno não encontrado.")
     
     check_ofensiva_perdida(aluno, db)
         
-    proxima = selecionar_proxima_questao(db, aluno.id, conceito_id)
+    proxima = selecionar_proxima_questao(db, aluno.id, conceito_id, nivel_maximo)
     if not proxima:
         return {"mensagem": "parabéns, conteúdo concluído", "ofensiva": aluno.ofensiva_dias}
         

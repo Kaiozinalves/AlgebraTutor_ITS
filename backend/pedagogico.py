@@ -69,7 +69,7 @@ Seja conciso, usando no máximo 2 a 3 parágrafos curtos.
         print(f"Erro na API do Gemini (Chat Dúvida): {e}")
         return "Desculpe, tive um pequeno problema técnico ao processar sua dúvida. Pode tentar de novo ou rever seus passos por enquanto?"
 
-def selecionar_proxima_questao(db: Session, aluno_id: int, conceito_id: int = None):
+def selecionar_proxima_questao(db: Session, aluno_id: int, conceito_id: int = None, nivel_maximo: int = None):
     # Filtra as questões que o aluno já respondeu
     questoes_respondidas = [
         r.questao_id for r in db.query(RespostaLog).filter(RespostaLog.aluno_id == aluno_id).all()
@@ -81,14 +81,21 @@ def selecionar_proxima_questao(db: Session, aluno_id: int, conceito_id: int = No
         if not c:
             return None
             
-        questoes_disponiveis = db.query(Questao).filter(
+        filtros = [
             Questao.conceito_id == conceito_id,
             Questao.id.not_in(questoes_respondidas) if questoes_respondidas else True
-        ).all()
+        ]
+        if nivel_maximo is not None:
+            filtros.append(Questao.dificuldade <= nivel_maximo)
+            
+        questoes_disponiveis = db.query(Questao).filter(*filtros).all()
         
         # Se já respondeu todas desse módulo, permite repeti-las na revisão
         if not questoes_disponiveis:
-            questoes_disponiveis = db.query(Questao).filter(Questao.conceito_id == conceito_id).all()
+            filtros_revisao = [Questao.conceito_id == conceito_id]
+            if nivel_maximo is not None:
+                filtros_revisao.append(Questao.dificuldade <= nivel_maximo)
+            questoes_disponiveis = db.query(Questao).filter(*filtros_revisao).all()
             if not questoes_disponiveis:
                 return None
                 
@@ -105,10 +112,14 @@ def selecionar_proxima_questao(db: Session, aluno_id: int, conceito_id: int = No
     conceitos_validos = []
     
     for c in desbloqueados:
-        questoes_disponiveis = db.query(Questao).filter(
+        filtros = [
             Questao.conceito_id == c["id"],
             Questao.id.not_in(questoes_respondidas) if questoes_respondidas else True
-        ).all()
+        ]
+        if nivel_maximo is not None:
+            filtros.append(Questao.dificuldade <= nivel_maximo)
+            
+        questoes_disponiveis = db.query(Questao).filter(*filtros).all()
         
         if questoes_disponiveis:
             conceitos_validos.append({

@@ -7,10 +7,13 @@ export const iniciarSessao = async (nome) => {
     return res.data;
 };
 
-export const obterProximaQuestao = async (nome, conceitoId = null) => {
-    let url = `${API_URL}/proxima/${nome}`;
+export const obterProximaQuestao = async (nome, conceitoId = null, nivelMaximo = null) => {
+    let url = `${API_URL}/proxima/${nome}?`;
     if (conceitoId) {
-        url += `?conceito_id=${conceitoId}`;
+        url += `conceito_id=${conceitoId}&`;
+    }
+    if (nivelMaximo) {
+        url += `nivel_maximo=${nivelMaximo}&`;
     }
     const res = await axios.get(url);
     return res.data;
