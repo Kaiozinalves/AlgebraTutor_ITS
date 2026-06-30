@@ -1,6 +1,7 @@
 import os
+import json
 from sqlalchemy.orm import Session
-from models import Questao, RespostaLog
+from models import Questao, RespostaLog, AlunoProgresso, Conceito
 import random
 from dominio import get_conceitos_desbloqueados
 from google import genai
@@ -69,79 +70,103 @@ Seja conciso, usando no máximo 2 a 3 parágrafos curtos.
         print(f"Erro na API do Gemini (Chat Dúvida): {e}")
         return "Desculpe, tive um pequeno problema técnico ao processar sua dúvida. Pode tentar de novo ou rever seus passos por enquanto?"
 
+def gerar_questao_ia(db: Session, conceito, dificuldade: int):
+    prompt = f"""Você é um professor de matemática especialista na construção de itens de múltipla escolha ou resposta direta.
+Sua missão é criar UMA (1) única questão de álgebra sobre o tema '{conceito.nome}'.
+O nível de dificuldade deve ser {dificuldade} (em uma escala de 1 a 4). 
+- Nível 1: Introdução ao conceito, números pequenos.
+- Nível 4: Desafio avançado, mais abstração ou números complexos.
+
+O resultado/gabarito final DEVE ser um número exato (inteiro ou decimal com precisão de até 2 casas).
+Por favor, responda APENAS com um objeto JSON válido, contendo "enunciado" e "gabarito", sem markdown.
+Exemplo: {{"enunciado": "Se 2x = 10, qual o valor de x?", "gabarito": 5}}
+"""
+    try:
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key: return None
+        client = genai.Client(api_key=api_key)
+        
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt
+        )
+        
+        texto = response.text.strip()
+        if texto.startswith("```json"): texto = texto[7:-3]
+        elif texto.startswith("```"): texto = texto[3:-3]
+        
+        dados = json.loads(texto)
+        nova_questao = Questao(
+            conceito_id=conceito.id,
+            enunciado=dados["enunciado"],
+            gabarito=float(dados["gabarito"]),
+            dificuldade=dificuldade
+        )
+        db.add(nova_questao)
+        db.commit()
+        db.refresh(nova_questao)
+        return nova_questao
+    except Exception as e:
+        print(f"Erro na IA ao gerar questao: {e}")
+        return None
+
 def selecionar_proxima_questao(db: Session, aluno_id: int, conceito_id: int = None, nivel_maximo: int = None):
-    # Filtra as questões que o aluno já respondeu
-    questoes_respondidas = [
-        r.questao_id for r in db.query(RespostaLog).filter(RespostaLog.aluno_id == aluno_id).all()
-    ]
-    
+    # 1. Definir o conceito alvo
     if conceito_id:
-        from models import Conceito
-        c = db.query(Conceito).filter(Conceito.id == conceito_id).first()
-        if not c:
+        conceito_alvo = db.query(Conceito).filter(Conceito.id == conceito_id).first()
+        if not conceito_alvo: return None
+    else:
+        desbloqueados = get_conceitos_desbloqueados(db, aluno_id)
+        if not desbloqueados: return None
+        
+        alvo_dict = min(desbloqueados, key=lambda x: x["dominio"])
+        conceito_alvo = db.query(Conceito).filter(Conceito.id == alvo_dict["id"]).first()
+        if not conceito_alvo: return None
+        
+    # 2. Definir a Dificuldade Ideal Baseada no Progresso
+    progresso = db.query(AlunoProgresso).filter(
+        AlunoProgresso.aluno_id == aluno_id,
+        AlunoProgresso.conceito_id == conceito_alvo.id
+    ).first()
+    
+    dom = progresso.dominio if progresso else 0.0
+    
+    dificuldade_ideal = 1
+    if dom >= 0.80:
+        dificuldade_ideal = 4
+    elif dom >= 0.50:
+        dificuldade_ideal = 3
+    elif dom >= 0.30:
+        dificuldade_ideal = 2
+        
+    if nivel_maximo is not None:
+        dificuldade_ideal = min(dificuldade_ideal, nivel_maximo)
+        
+    # 3. Tentar gerar com a Inteligência Artificial
+    questao_escolhida = gerar_questao_ia(db, conceito_alvo, dificuldade_ideal)
+    
+    # 4. Fallback de Segurança
+    if not questao_escolhida:
+        questoes_respondidas = [r.questao_id for r in db.query(RespostaLog).filter(RespostaLog.aluno_id == aluno_id).all()]
+        filtros = [Questao.conceito_id == conceito_alvo.id]
+        if questoes_respondidas:
+            filtros.append(Questao.id.not_in(questoes_respondidas))
+        if nivel_maximo is not None:
+            filtros.append(Questao.dificuldade <= nivel_maximo)
+            
+        disponiveis = db.query(Questao).filter(*filtros).all()
+        if not disponiveis:
+            disponiveis = db.query(Questao).filter(Questao.conceito_id == conceito_alvo.id).all()
+            
+        if disponiveis:
+            questao_escolhida = random.choice(disponiveis)
+        else:
             return None
             
-        filtros = [
-            Questao.conceito_id == conceito_id,
-            Questao.id.not_in(questoes_respondidas) if questoes_respondidas else True
-        ]
-        if nivel_maximo is not None:
-            filtros.append(Questao.dificuldade <= nivel_maximo)
-            
-        questoes_disponiveis = db.query(Questao).filter(*filtros).all()
-        
-        # Se já respondeu todas desse módulo, permite repeti-las na revisão
-        if not questoes_disponiveis:
-            filtros_revisao = [Questao.conceito_id == conceito_id]
-            if nivel_maximo is not None:
-                filtros_revisao.append(Questao.dificuldade <= nivel_maximo)
-            questoes_disponiveis = db.query(Questao).filter(*filtros_revisao).all()
-            if not questoes_disponiveis:
-                return None
-                
-        questao_escolhida = random.choice(questoes_disponiveis)
-        return {
-            "questao_id": questao_escolhida.id,
-            "enunciado": questao_escolhida.enunciado,
-            "dificuldade": questao_escolhida.dificuldade,
-            "conceito": c.nome,
-            "conceito_id": c.id
-        }
-
-    desbloqueados = get_conceitos_desbloqueados(db, aluno_id)
-    conceitos_validos = []
-    
-    for c in desbloqueados:
-        filtros = [
-            Questao.conceito_id == c["id"],
-            Questao.id.not_in(questoes_respondidas) if questoes_respondidas else True
-        ]
-        if nivel_maximo is not None:
-            filtros.append(Questao.dificuldade <= nivel_maximo)
-            
-        questoes_disponiveis = db.query(Questao).filter(*filtros).all()
-        
-        if questoes_disponiveis:
-            conceitos_validos.append({
-                "id": c["id"],
-                "nome": c["nome"],
-                "dominio": c["dominio"],
-                "questoes": questoes_disponiveis
-            })
-            
-    if not conceitos_validos:
-        return None
-        
-    # Escolher o de menor domínio
-    conceito_escolhido = min(conceitos_validos, key=lambda x: x["dominio"])
-    
-    # Sortear uma questão
-    questao_escolhida = random.choice(conceito_escolhido["questoes"])
-    
     return {
         "questao_id": questao_escolhida.id,
         "enunciado": questao_escolhida.enunciado,
         "dificuldade": questao_escolhida.dificuldade,
-        "conceito": conceito_escolhido["nome"],
-        "conceito_id": conceito_escolhido["id"]
+        "conceito": conceito_alvo.nome,
+        "conceito_id": conceito_alvo.id
     }
