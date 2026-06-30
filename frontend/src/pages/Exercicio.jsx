@@ -347,6 +347,16 @@ function Exercicio() {
               >
                 Prefiro Fazer uma Pausa
               </button>
+              <button
+                onClick={() => {
+                  setFrustracaoDetectada(false);
+                  setTempoNaQuestao(0);
+                  setErrosSeguidos(0);
+                }}
+                className="w-full py-3 bg-transparent hover:bg-dark-800 text-slate-400 text-sm font-medium rounded-xl transition"
+              >
+                Quero continuar tentando essa questão
+              </button>
             </div>
           </div>
         </div>
