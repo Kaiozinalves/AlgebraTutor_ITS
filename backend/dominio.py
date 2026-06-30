@@ -64,7 +64,7 @@ def aplicar_cascata_bloqueio(db: Session, aluno_id: int):
                     
     db.commit()
 
-def atualizar_dominio(db: Session, aluno_id: int, conceito_id: int, acertou: bool):
+def atualizar_dominio(db: Session, aluno_id: int, conceito_id: int, acertou: bool, usou_dica: bool = False):
     progresso = db.query(AlunoProgresso).filter(
         AlunoProgresso.aluno_id == aluno_id,
         AlunoProgresso.conceito_id == conceito_id
@@ -75,7 +75,8 @@ def atualizar_dominio(db: Session, aluno_id: int, conceito_id: int, acertou: boo
         db.add(progresso)
     
     if acertou:
-        progresso.dominio = min(1.0, progresso.dominio + 0.20)
+        ganho = 0.10 if usou_dica else 0.20
+        progresso.dominio = min(1.0, progresso.dominio + ganho)
         db.commit()
     else:
         progresso.dominio = max(0.0, progresso.dominio - 0.10)

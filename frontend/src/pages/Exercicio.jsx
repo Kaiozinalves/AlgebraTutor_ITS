@@ -17,6 +17,7 @@ function Exercicio() {
   const [textoDuvida, setTextoDuvida] = useState('');
   const [respostaDuvida, setRespostaDuvida] = useState('');
   const [loadingDuvida, setLoadingDuvida] = useState(false);
+  const [usouDica, setUsouDica] = useState(false);
 
   const [feedback, setFeedback] = useState(null);
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ function Exercicio() {
     setDuvidaAberto(false);
     setTextoDuvida('');
     setRespostaDuvida('');
+    setUsouDica(false);
     
     try {
       const data = await obterProximaQuestao(aluno, conceitoId);
@@ -77,7 +79,7 @@ function Exercicio() {
 
     setLoading(true);
     try {
-      const res = await responderQuestao(nome, questao.questao_id, ans);
+      const res = await responderQuestao(nome, questao.questao_id, ans, usouDica);
       setFeedback(res);
       if (res.questoes_hoje !== undefined) {
         setQuestoesHoje(res.questoes_hoje);
@@ -98,6 +100,7 @@ function Exercicio() {
     e.preventDefault();
     if (!textoDuvida.trim()) return;
     
+    setUsouDica(true);
     setLoadingDuvida(true);
     try {
       const res = await enviarDuvida(questao.enunciado, textoDuvida);

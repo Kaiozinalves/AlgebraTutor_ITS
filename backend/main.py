@@ -45,6 +45,7 @@ class ResponderRequest(BaseModel):
     nome: str
     questao_id: int
     resposta: float
+    usou_dica: bool = False
 
 class DuvidaRequest(BaseModel):
     enunciado: str
@@ -101,7 +102,7 @@ def responder_questao(req: ResponderRequest, db: Session = Depends(get_db)):
     acertou = abs(req.resposta - questao.gabarito) < 0.05
     
     # Atualizar domínio
-    novo_dominio = atualizar_dominio(db, aluno.id, questao.conceito_id, acertou)
+    novo_dominio = atualizar_dominio(db, aluno.id, questao.conceito_id, acertou, req.usou_dica)
     
     # Registrar log para não repetir
     log = RespostaLog(aluno_id=aluno.id, questao_id=questao.id, acertou=acertou)

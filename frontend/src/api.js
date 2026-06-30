@@ -16,8 +16,8 @@ export const obterProximaQuestao = async (nome, conceitoId = null) => {
     return res.data;
 };
 
-export const responderQuestao = async (nome, questao_id, resposta) => {
-    const res = await axios.post(`${API_URL}/responder`, { nome, questao_id, resposta });
+export const responderQuestao = async (nome, questao_id, resposta, usou_dica = false) => {
+    const res = await axios.post(`${API_URL}/responder`, { nome, questao_id, resposta, usou_dica });
     return res.data;
 };
 
