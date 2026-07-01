@@ -19,8 +19,18 @@ export const obterProximaQuestao = async (nome, conceitoId = null, nivelMaximo =
     return res.data;
 };
 
-export const responderQuestao = async (nome, questao_id, resposta, usou_dica = false) => {
-    const res = await axios.post(`${API_URL}/responder`, { nome, questao_id, resposta, usou_dica });
+export const responderQuestao = async (nome, questaoId, respostaLog, usouDica = false) => {
+    const res = await axios.post(`${API_URL}/responder`, {
+        nome_aluno: nome,
+        questao_id: questaoId,
+        resposta: respostaLog,
+        usou_dica: usouDica
+    });
+    return res.data;
+};
+
+export const obterResumoTeoria = async (nome, conceitoId) => {
+    const res = await axios.get(`${API_URL}/resumo/${nome}/${conceitoId}`);
     return res.data;
 };
 

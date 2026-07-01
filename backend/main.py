@@ -83,8 +83,21 @@ def obter_proxima_questao(nome: str, conceito_id: Optional[int] = None, nivel_ma
     if not proxima:
         return {"mensagem": "parabéns, conteúdo concluído", "ofensiva": aluno.ofensiva_dias}
         
-    proxima["ofensiva"] = aluno.ofensiva_dias
-    return proxima
+    return {**proxima, "ofensiva": aluno.ofensiva_dias}
+
+@app.get("/resumo/{nome}/{conceito_id}")
+def obter_resumo_teorico(nome: str, conceito_id: int, db: Session = Depends(get_db)):
+    aluno = db.query(Aluno).filter(Aluno.nome == nome).first()
+    if not aluno:
+        raise HTTPException(status_code=404, detail="Aluno não encontrado.")
+    
+    conceito = db.query(Conceito).filter(Conceito.id == conceito_id).first()
+    if not conceito:
+        raise HTTPException(status_code=404, detail="Conceito não encontrado.")
+        
+    from pedagogico import gerar_resumo_ia
+    resumo_md = gerar_resumo_ia(db, conceito)
+    return {"resumo": resumo_md}
 
 @app.post("/responder")
 def responder_questao(req: ResponderRequest, db: Session = Depends(get_db)):

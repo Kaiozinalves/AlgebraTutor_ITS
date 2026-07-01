@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BookOpen } from 'lucide-react';
 import Login from './pages/Login';
 import Exercicio from './pages/Exercicio';
 import Progresso from './pages/Progresso';
+import Teoria from './pages/Teoria';
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
               ITS Álgebra Básica
             </h1>
             <div className="flex gap-4">
-              <a href="/progresso" className="text-sm text-slate-400 hover:text-white transition-colors">Progresso</a>
-              <a href="/exercicio" className="text-sm text-slate-400 hover:text-white transition-colors">Praticar</a>
+              <a href="/teoria" className="text-sm text-slate-400 hover:text-brand-400 transition-colors flex items-center gap-1"><BookOpen size={16} /> Biblioteca</a>
+              <a href="/progresso" className="text-sm text-slate-400 hover:text-brand-400 transition-colors">Progresso</a>
+              <a href="/exercicio" className="text-sm text-slate-400 hover:text-brand-400 transition-colors">Praticar</a>
             </div>
           </div>
         </header>
@@ -24,6 +27,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/exercicio" element={<Exercicio />} />
             <Route path="/progresso" element={<Progresso />} />
+            <Route path="/teoria" element={<Teoria />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
