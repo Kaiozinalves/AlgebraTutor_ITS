@@ -143,10 +143,23 @@ def selecionar_proxima_questao(db: Session, aluno_id: int, conceito_id: int = No
     if nivel_maximo is not None:
         dificuldade_ideal = min(dificuldade_ideal, nivel_maximo)
         
-    # 3. Tentar gerar com a Inteligência Artificial
-    questao_escolhida = gerar_questao_ia(db, conceito_alvo, dificuldade_ideal)
+    # 3. Verificar se já existe alguma questão não respondida desse conceito e dificuldade
+    questoes_respondidas = [r.questao_id for r in db.query(RespostaLog).filter(RespostaLog.aluno_id == aluno_id).all()]
     
-    # 4. Fallback de Segurança
+    filtros = [Questao.conceito_id == conceito_alvo.id, Questao.dificuldade == dificuldade_ideal]
+    if questoes_respondidas:
+        filtros.append(Questao.id.not_in(questoes_respondidas))
+        
+    disponiveis = db.query(Questao).filter(*filtros).all()
+    
+    if disponiveis:
+        # Se achou questões prontas e não respondidas, pega uma delas
+        questao_escolhida = random.choice(disponiveis)
+    else:
+        # Se o banco esgotou para esse nível, aí sim chama a IA para gerar e injetar mais uma
+        questao_escolhida = gerar_questao_ia(db, conceito_alvo, dificuldade_ideal)
+    
+    # 4. Fallback de Segurança Extrema (se a IA falhar e não houver questões ideais)
     if not questao_escolhida:
         questoes_respondidas = [r.questao_id for r in db.query(RespostaLog).filter(RespostaLog.aluno_id == aluno_id).all()]
         filtros = [Questao.conceito_id == conceito_alvo.id]

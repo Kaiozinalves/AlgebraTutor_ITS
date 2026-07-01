@@ -60,7 +60,11 @@ function Exercicio() {
     navigate('/');
   };
 
-  const carregarQuestao = async (aluno, nivelMaximo = null) => {
+  const carregarQuestao = async (aluno, nivelMaximo = null, limparCache = false) => {
+    if (limparCache) {
+      sessionStorage.removeItem(`questaoAtiva_${aluno}`);
+    }
+
     setLoading(true);
     setFeedback(null);
     setResposta('');
@@ -76,6 +80,18 @@ function Exercicio() {
     setFrustracaoDetectada(false);
     
     try {
+      if (!limparCache && !nivelMaximo) {
+        const cached = sessionStorage.getItem(`questaoAtiva_${aluno}`);
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (!conceitoId || parsed.conceito_id == conceitoId) {
+            setQuestao(parsed);
+            setLoading(false);
+            return;
+          }
+        }
+      }
+
       const data = await obterProximaQuestao(aluno, conceitoId, nivelMaximo);
       if (data.ofensiva !== undefined) {
         setOfensiva(data.ofensiva);
@@ -83,8 +99,10 @@ function Exercicio() {
       
       if (data.mensagem) {
         setQuestao(null); // Concluído
+        sessionStorage.removeItem(`questaoAtiva_${aluno}`);
       } else {
         setQuestao(data);
+        sessionStorage.setItem(`questaoAtiva_${aluno}`, JSON.stringify(data));
       }
     } catch (err) {
       console.error(err);
@@ -112,6 +130,7 @@ function Exercicio() {
         setErrosSeguidos(prev => prev + 1);
       } else {
         setErrosSeguidos(0);
+        sessionStorage.removeItem(`questaoAtiva_${nome}`);
       }
       
       if (res.questoes_hoje !== undefined) {
@@ -314,7 +333,7 @@ function Exercicio() {
           )}
           
           <button
-            onClick={() => carregarQuestao(nome)}
+            onClick={() => carregarQuestao(nome, null, true)}
             className="w-full flex items-center justify-center gap-2 py-3 bg-dark-700 hover:bg-dark-600 font-semibold rounded-xl transition"
           >
             Próxima Questão
