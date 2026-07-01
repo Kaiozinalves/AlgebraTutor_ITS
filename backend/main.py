@@ -95,9 +95,7 @@ def obter_resumo_teorico(nome: str, conceito_id: int, db: Session = Depends(get_
     if not conceito:
         raise HTTPException(status_code=404, detail="Conceito não encontrado.")
         
-    from pedagogico import gerar_resumo_ia
-    resumo_md = gerar_resumo_ia(db, conceito)
-    return {"resumo": resumo_md}
+    return {"resumo": conceito.resumo_teorico}
 
 @app.post("/responder")
 def responder_questao(req: ResponderRequest, db: Session = Depends(get_db)):

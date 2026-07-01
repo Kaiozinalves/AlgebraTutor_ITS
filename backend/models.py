@@ -8,6 +8,7 @@ class Conceito(Base):
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String, index=True)
     nivel = Column(Integer)
+    resumo_teorico = Column(String, nullable=True)
     
     # Relação para pegar os pré-requisitos onde este conceito é o alvo
     pre_requisitos = relationship("PreRequisito", foreign_keys="PreRequisito.conceito_id", back_populates="conceito")

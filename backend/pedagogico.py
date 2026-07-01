@@ -70,33 +70,6 @@ Seja conciso, usando no máximo 2 a 3 parágrafos curtos.
         print(f"Erro na API do Gemini (Chat Dúvida): {e}")
         return "Desculpe, tive um pequeno problema técnico ao processar sua dúvida. Pode tentar de novo ou rever seus passos por enquanto?"
 
-def gerar_resumo_ia(db: Session, conceito: Conceito):
-    prompt = f"""Você é o autor de um livro didático de matemática muito moderno.
-Escreva um resumo teórico sobre o conceito: "{conceito.nome}".
-
-O resumo deve ser formatado em Markdown e conter as seguintes seções (usando títulos ##):
-1. **O que é?**: Uma definição simples e direta do conceito.
-2. **Fórmulas / Regras**: As principais fórmulas matemáticas, se aplicável, ou as regras básicas.
-3. **Exemplo Prático**: Um passo a passo super didático resolvendo um problema clássico.
-4. **Dica de Ouro**: Um parágrafo rápido com uma dica essencial para não errar.
-
-Use formatação bonita (negrito, listas, blocos de código para matemática se necessário). Mantenha tudo no máximo em 400 palavras para o aluno não ficar com preguiça. Retorne APENAS o texto em Markdown.
-"""
-    try:
-        api_key = os.environ.get("GEMINI_API_KEY")
-        if not api_key: return "Erro: Chave de API não configurada."
-        client = genai.Client(api_key=api_key)
-        
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=prompt
-        )
-        
-        texto = response.text.strip()
-        return texto
-    except Exception as e:
-        print(f"Erro na IA ao gerar resumo: {e}")
-        return "Desculpe, o sistema tutor está offline para buscar a teoria no momento. Tente novamente mais tarde."
 
 def gerar_questao_ia(db: Session, conceito, dificuldade: int):
     prompt = f"""Você é um professor de matemática especialista na construção de itens de múltipla escolha ou resposta direta.
