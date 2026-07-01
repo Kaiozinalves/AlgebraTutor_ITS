@@ -21,24 +21,24 @@ export default function Teoria() {
     
     // Puxa o progresso para saber quais conceitos existem e estão desbloqueados
     obterProgresso(aluno).then(data => {
-      setConceitos(data.progresso);
+      setConceitos(data.modulos);
     }).catch(err => {
       console.error(err);
     });
   }, [navigate]);
 
-  const handleAbrirResumo = async (conceito) => {
-    if (!conceito.desbloqueado) return;
+  const handleAbrirResumo = async (modulo) => {
+    if (modulo.status === 'bloqueado') return;
     
     setLoadingResumo(true);
-    setResumoAtual({ nome: conceito.nome, texto: null }); // mostra o skeleton
+    setResumoAtual({ nome: modulo.conceito, texto: null }); // mostra o skeleton
     
     try {
-      const data = await obterResumoTeoria(nome, conceito.id);
-      setResumoAtual({ nome: conceito.nome, texto: data.resumo });
+      const data = await obterResumoTeoria(nome, modulo.conceito_id);
+      setResumoAtual({ nome: modulo.conceito, texto: data.resumo });
     } catch (err) {
       console.error(err);
-      setResumoAtual({ nome: conceito.nome, texto: "Erro ao buscar resumo." });
+      setResumoAtual({ nome: modulo.conceito, texto: "Erro ao buscar resumo." });
     } finally {
       setLoadingResumo(false);
     }
@@ -57,27 +57,27 @@ export default function Teoria() {
         <div className="space-y-3 flex-1 overflow-y-auto pr-2">
           {conceitos.map((c) => (
             <button
-              key={c.id}
+              key={c.conceito_id}
               onClick={() => handleAbrirResumo(c)}
-              disabled={!c.desbloqueado}
+              disabled={c.status === 'bloqueado'}
               className={`w-full text-left p-4 rounded-xl border transition flex items-center justify-between
-                ${!c.desbloqueado 
+                ${c.status === 'bloqueado'
                   ? 'bg-dark-900 border-dark-700 opacity-60 cursor-not-allowed' 
-                  : resumoAtual?.nome === c.nome
+                  : resumoAtual?.nome === c.conceito
                     ? 'bg-brand-500/10 border-brand-500/50 text-brand-300'
                     : 'bg-dark-700/50 border-dark-600 hover:bg-dark-700 hover:border-brand-500/30'
                 }
               `}
             >
               <div>
-                <span className={`font-semibold ${!c.desbloqueado ? 'text-slate-500' : 'text-slate-200'}`}>
-                  {c.nome}
+                <span className={`font-semibold ${c.status === 'bloqueado' ? 'text-slate-500' : 'text-slate-200'}`}>
+                  {c.conceito}
                 </span>
               </div>
-              {!c.desbloqueado ? (
+              {c.status === 'bloqueado' ? (
                 <Lock size={18} className="text-slate-500" />
               ) : (
-                <ChevronRight size={18} className={resumoAtual?.nome === c.nome ? 'text-brand-400' : 'text-slate-400'} />
+                <ChevronRight size={18} className={resumoAtual?.nome === c.conceito ? 'text-brand-400' : 'text-slate-400'} />
               )}
             </button>
           ))}
