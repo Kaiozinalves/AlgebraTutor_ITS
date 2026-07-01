@@ -21,7 +21,7 @@ export const obterProximaQuestao = async (nome, conceitoId = null, nivelMaximo =
 
 export const responderQuestao = async (nome, questaoId, respostaLog, usouDica = false) => {
     const res = await axios.post(`${API_URL}/responder`, {
-        nome_aluno: nome,
+        nome: nome,
         questao_id: questaoId,
         resposta: respostaLog,
         usou_dica: usouDica
